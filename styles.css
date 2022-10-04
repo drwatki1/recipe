@@ -1,0 +1,288 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #0d0d0d;
+}
+body {
+  max-width: 414px;
+  margin: auto;
+  background-color: rgba(122, 191, 191, 0.5);
+}
+
+h1 {
+  padding-top: 150px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+menu {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-bottom: 5px;
+}
+
+menu li {
+  list-style-type: none;
+  justify-self: center;
+  text-align: center;
+}
+
+menu li span {
+  color: #eb5428;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+}
+svg {
+  width: 100%;
+}
+
+main {
+  background-color: #f2f2f2;
+}
+section {
+  background-color: #7abfbf;
+}
+main p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+
+main h2,
+section h2 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+/* decreasing the p tag padding */
+.details {
+  padding: 5px;
+}
+.details-parts {
+  font-weight: bold;
+}
+
+main ul,
+main ol {
+  padding-left: 25px;
+}
+
+main ul li {
+  font-size: 16px;
+  padding: 5px 0px;
+  font-family: "Montserrat", sans-serif;
+  list-style-type: square;
+}
+
+main ol li {
+  font-size: 16px;
+  padding: 10px 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+section div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 15px 10px;
+}
+
+section div img {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 4;
+}
+section div h3 {
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 2;
+  padding-left: 10px;
+}
+section div p:first-of-type {
+  font-size: 16px;
+  padding-top: 5px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  grid-column: 2 / span 4;
+  grid-row: 2 / span 3;
+  padding-left: 10px;
+}
+section div p:nth-of-type(2) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-top: 5px;
+  grid-column: 2 / span 4;
+  grid-row: 3 / span 3;
+  padding-left: 10px;
+}
+
+section div .rating {
+  grid-column: 2 / span 4;
+  grid-row: 4 / span 3;
+  padding-left: 10px;
+}
+.rating svg {
+  display: inline;
+  width: unset;
+}
+
+img {
+  width: 100%;
+}
+
+nav ul {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  user-select: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav label,
+nav label svg,
+nav #logo,
+nav #avatar {
+  width: unset;
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  width: 414px;
+  top: 0;
+  border-bottom: 2px solid gray;
+  z-index: 2;
+}
+
+nav ul {
+  width: 0px;
+}
+
+nav label,
+nav #avatar {
+  background-color: #f2f2f2;
+  text-align: center;
+  width: 75px;
+  color: black;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  font-weight: 400;
+}
+nav #avatar {
+  text-decoration: none;
+}
+nav label {
+  display: grid;
+  grid-template-rows: 2;
+  justify-content: center;
+}
+
+nav #logo {
+  flex-grow: 2;
+  background-color: #eb5428;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  max-width: 414px;
+  position: relative;
+  top: -2540px;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+.search h2 {
+  display: none;
+}
+.search input {
+  width: 275px;
+}
+
+.search svg {
+  width: unset;
+}
+
+footer {
+  margin-top: -40px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+}
+footer h2 {
+  display: none;
+  background-color: #f2f2f2;
+}
+footer div {
+  padding-top: 25px;
+  display: grid;
+  justify-items: center;
+}
+
+footer div #facebook {
+  grid-column: 1 / span 1;
+}
+
+footer div #instagram {
+  grid-column: 2 / span 1;
+}
+footer div #youtube {
+  grid-column: 3 / span 1;
+}
+footer div #tiktok {
+  grid-column: 4 / span 1;
+}
+
+figcaption {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  font-weight: 400;
+  color: #eb5428;
+}
+
+.copyright-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.copyright-section img {
+  order: 1;
+  width: 50%;
+}
+.copyright-section #copyright {
+  order: 2;
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+.copyright-section #business-name {
+  order: 3;
+  flex-basis: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
