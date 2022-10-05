@@ -482,4 +482,47 @@ figcaption {
   body {
     max-width: 1280px;
   }
+  nav {
+    width: 1280px;
+    grid-template-rows: unset;
+    padding-bottom: 0px;
+  }
+  .navigation{
+    width: 1280px;
+  }
+  .navigation .avatar{
+    grid-column: 10;
+  }
+  .navigation .logo, .navigation .avatar{
+    width: 100px;
+    height: 100px;
+    padding-left: 30px;
+  }
+  .navigation .avatar{
+    padding-top: 15px;
+    padding-right: 30px;
+  }
+  .navigation ul{
+    grid-row: 1;
+    grid-column: 3/ span 5;
+  }
+  .navigation ul li{
+    padding: 0;
+    margin-top: -50px;
+  }
+  .navigation ul li a img{
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+  }
+  .navigation .search{
+    position: absolute;
+    top: 45px;
+    grid-row: 2;
+    grid-column: 4/span 3;
+  }
+  h1{
+    text-align: center;
+  }
 }
