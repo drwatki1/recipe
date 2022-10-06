@@ -95,12 +95,13 @@ main ol li {
   font-family: "Montserrat", sans-serif;
 }
 
-section div {
+section div:not(.directions):not(.ingredients):not(.dishes-two-columns):not(.search) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   padding: 15px 10px;
 }
+
 .dishes-one-column {
   grid-template-columns: 1fr;
 }
@@ -248,15 +249,18 @@ img {
   width: unset;
 }
 .search {
+  display: grid;
   order: 4;
   width: 75%;
+  position: absolute;
+  top: 90px;
   background-color: #f2f2f2;
-  z-index: 0;
-  grid-template-columns: 1;
+  z-index: -1;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: unset;
   justify-content: center;
 }
-.search input {
+div.search input {
   display: unset;
 }
 .search h2 {
@@ -287,7 +291,7 @@ footer h2 {
   padding: 25px 0px;
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .side-dishes {
@@ -328,19 +332,22 @@ figcaption {
 
 .copyright-section img {
   order: 1;
-  width: 50%;
+  width: 75%;
 }
-.copyright-section #copyright {
+.copyright-section .copyright-details {
   order: 2;
   flex-basis: 100%;
   text-align: center;
   padding-top: 30px;
 }
-.copyright-section #business-name {
+.copyright-section .copyright-details #business-name {
   order: 3;
   flex-basis: 100%;
   text-align: center;
   padding-bottom: 10px;
+}
+.navigation h2{
+  display: none;
 }
 
 @media only screen and (min-width: 415px) {
@@ -376,6 +383,7 @@ figcaption {
     justify-content: unset;
     width: unset;
     order: unset;
+    position: unset;
     margin-left: 50px;
   }
   nav ul {
@@ -417,7 +425,7 @@ figcaption {
 
   section#details-ingredients {
     display: grid;
-    grid-template-columns: 1fr, 2fr;
+    grid-template-columns: 1fr 2fr;
     background-color: #f2f2f2;
     padding-top: 10px;
   }
@@ -430,17 +438,18 @@ figcaption {
   .directions ol li {
     padding-bottom: 10px;
   }
-  section.side-dishes .dishes-two-columns {
-    grid-template-columns: unset;
-    grid-template-rows: unset;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 2;
+  .side-dishes .dishes-two-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
+
+  .side-dishes h2{
+    grid-column: 1/span 2;
+  }
+  .side-dishes
   .dishes-two-columns div {
     padding: 10px 5px;
-  }
-  section.side-dishes h2 {
-    grid-column: 1 / span 1;
   }
   .guacomole {
     grid-column: 1;
@@ -452,7 +461,7 @@ figcaption {
   }
   footer {
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   footer .copyright-section {
     display: grid;
@@ -464,7 +473,7 @@ figcaption {
     padding-top: 25px;
     width: 200px;
   }
-  footer .copyright-section p{
+  footer .copyright-section p {
     grid-row: 2;
   }
   footer .socials {
@@ -543,7 +552,7 @@ figcaption {
   }
   .main-dish {
     display: grid;
-    grid-template-columns: 75px, 1fr, 1fr;
+    grid-template-columns: 75px 1fr 1fr;
   }
 
   .main-dish menu {
@@ -571,7 +580,7 @@ figcaption {
   }
   p.details {
     display: grid;
-    grid-template-rows: 10px, 10px;
+    grid-template-rows: 20px 20px;
   }
   .details-parts,
   .descriptions {
@@ -581,8 +590,8 @@ figcaption {
     grid-row: 2;
   }
   section.side-dishes .dishes-two-columns {
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-    grid-template-rows: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px;
   }
   .mexican-rice {
     grid-column: 1;
