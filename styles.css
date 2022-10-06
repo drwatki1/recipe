@@ -6,6 +6,7 @@ font-family: 'Source Sans Pro', sans-serif; */
   margin: 0;
   padding: 0;
   color: #0d0d0d;
+  transition: .5s;
 }
 body {
   max-width: 414px;
@@ -21,6 +22,7 @@ h1 {
   font-size: 40px;
   text-align: center;
   background-color: #f2f2f2;
+  width: 100%;
 }
 
 menu {
@@ -192,18 +194,21 @@ nav ul li {
   display: block;
   padding: 20px;
   text-decoration: none;
-  background-color: #eb5428;
-  color: #f2f2f2;
-}
-
-nav ul li:hover {
   background-color: #f2f2f2;
   color: #eb5428;
 }
 
+nav ul li:hover {
+  background-color: #eb5428;
+}
+
 nav ul li a {
   text-decoration: none;
-  color: #0d0d0d;
+  color: #eb5428;
+}
+nav ul li a:hover{
+  color: #f2f2f2;
+
 }
 .logo {
   padding: 5px;
@@ -361,6 +366,7 @@ figcaption {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 75px;
     padding-bottom: 125px;
+    position: fixed;
   }
   .navigation nav label {
     display: none;
@@ -393,6 +399,7 @@ figcaption {
     overflow: visible;
   }
   nav ul li {
+    height: 90px;
     background-color: #f2f2f2;
   }
   nav ul li a {
@@ -400,6 +407,9 @@ figcaption {
     width: unset;
     height: 75px;
     text-align: center;
+  }
+  nav ul li:hover{
+    background-color: #eb5428;
   }
   nav ul img {
     display: block;
@@ -409,6 +419,7 @@ figcaption {
     padding-top: 225px;
     text-align: left;
     padding-left: 10px;
+    width: 758px;
   }
   main {
     position: relative;
@@ -417,8 +428,14 @@ figcaption {
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(242,242,242,0.5);
+    backdrop-filter: blur(5px);
   }
 
+  main menu li span:hover{
+    color: #f2f2f2;
+    background-color: #eb5428;
+  }
   p.details {
     text-align: center;
   }
@@ -458,6 +475,9 @@ figcaption {
   .tortilla {
     grid-column: 2;
     grid-row: 2;
+  }
+  div.mexican-rice:hover, div.salsa:hover, div.guacomole:hover, div.tortilla:hover{
+    background-color: #eb5428;
   }
   footer {
     display: grid;
@@ -499,6 +519,7 @@ figcaption {
     width: 1280px;
     grid-template-rows: unset;
     padding-bottom: 0px;
+    position: absolute;
   }
   .navigation {
     width: 1280px;
@@ -538,6 +559,7 @@ figcaption {
   }
   h1 {
     text-align: center;
+    width: 1270px;
   }
   main menu {
     position: unset;
